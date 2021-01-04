@@ -1,0 +1,15 @@
+function [ x_m ] = decompose_signal2( x,M )
+%DECOMPOSE_SIGNAL Summary of this function goes here
+%   Detailed explanation goes here
+    Nm=ceil(1+length(x)/M);
+    x_m=zeros(Nm,M);
+    x_0=x(1:M:end);
+    x_m(1:length(x_0),1)=x_0;
+    for m=1:M-1
+        
+    end
+    x_m=decompose_filter(x,M);
+    x_m(:,2:end)=fliplr([zeros(1,M-1);x_m(1:end-1,2:end)]);
+    
+end
+

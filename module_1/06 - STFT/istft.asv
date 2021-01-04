@@ -1,0 +1,9 @@
+function [x]= istft(X, Noverlap)
+    [F, T]=size(X);
+    x=zeros(1,T*(Noverlap+2)); %% just to be sure
+    X_=X
+    
+    for 
+
+
+end
